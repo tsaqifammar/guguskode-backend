@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "subcomments",
+  "info": {
+    "singularName": "subcomment",
+    "pluralName": "subcomments",
+    "displayName": "Subcomment",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "content": {
+      "type": "richtext",
+      "required": true
+    },
+    "parent_comment": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::comment.comment",
+      "inversedBy": "subcomments"
+    }
+  }
+}
