@@ -21,6 +21,12 @@
       "relation": "manyToOne",
       "target": "api::comment.comment",
       "inversedBy": "subcomments"
+    },
+    "author": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "subcomments"
     }
   }
 }
